@@ -6,14 +6,15 @@ const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const localImages = require("eleventy-plugin-local-images");
 const lazyImages = require("eleventy-plugin-lazyimages");
 const ghostContentAPI = require("@tryghost/content-api");
+const GhostAdminAPI = require('@tryghost/admin-api');
 
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 
 // Init Ghost API
 const api = new ghostContentAPI({
-  url: process.env.GHOST_API_URL,
-  key: process.env.GHOST_CONTENT_API_KEY,
-  version: "v2"
+                url: process.env.GHOST_API_URL,
+                key: process.env.GHOST_CONTENT_API_KEY,
+                version: "v2"
 });
 
 // Strip Ghost domain from urls
