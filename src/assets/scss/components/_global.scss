@@ -1,0 +1,66 @@
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		 animation-duration: 0.01ms !important;
+		 animation-iteration-count: 1 !important;
+		 transition-duration: 0.01ms !important;
+		 scroll-behavior: auto !important;
+	}
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 118.2%;
+}
+
+body {
+  color: var(--color-text);
+  font-size: var(--base);
+  font-family: $text-font;
+  font-weight: $text-weight;
+  background-image: var(--color-background);
+  background-size: 200%;
+  background-attachment: fixed;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  scroll-behavior: smooth;
+	@apply flex flex-col w-full h-full relative;
+}
+
+html.trans,
+html.trans *,
+html.trans *:before,
+html.trans *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+a {
+  position: relative;
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 300ms ease;
+  &:hover,
+  &:focus {
+    color: var(--color-link-hover);
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
+
+main {
+  @apply relative w-full h-full bg-white;
+}
+
+.container {
+  @apply px-2;
+  @include adaptive($space);
+}

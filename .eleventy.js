@@ -183,6 +183,7 @@ module.exports = function(config) {
 
   // Display 404 page in BrowserSnyc
   config.setBrowserSyncConfig({
+    files: "dist/assets/**/*.css",
     callbacks: {
       ready: (err, bs) => {
         const content_404 = fs.readFileSync("dist/404.html");

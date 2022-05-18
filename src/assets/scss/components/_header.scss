@@ -1,0 +1,32 @@
+.header {
+  @apply relative w-full py-8;
+  .container {
+    @apply flex items-center;
+  }
+  .title {
+    @apply flex-none;
+    &__name {
+      font-size: $xxxl;
+      text-transform: uppercase;
+      a {
+        color: $nord10;
+      }
+    }
+  }
+  .navbar {
+    @apply flex-1;
+    .menu {
+      @apply flex flex-1 w-full justify-end pr-10;
+      ul {
+        @apply flex items-center justify-end gap-10;
+        li {
+          a {
+            font-size: $lg;
+            font-family: $genos;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "main.css": "dist/assets/assets/css/main.css",
+  "main.js": "dist/assets/assets/js/app.js",
+  "main.css.map": "dist/assets/assets/css/main.css.map",
+  "app.js.map": "dist/assets/assets/js/app.js.map"
+}
